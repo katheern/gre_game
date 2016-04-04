@@ -16,12 +16,14 @@ class Data(object):
     def display_words(self):
         for word in self.words:
             print word
+            
     # Chooses a random word from the wordlist
     def answer(self):
         answer_idx = random.randint(0, len(self.words) - 1)
         answer = self.words[answer_idx]
         del self.words[answer_idx]
         return answer
+        
     # Queries the definition of the answer
     def definition(self, answer):
         query = self.lookup.meaning(answer)
